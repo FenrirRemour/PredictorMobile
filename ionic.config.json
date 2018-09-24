@@ -1,0 +1,7 @@
+{
+  "name": "ionic3-maps-test",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

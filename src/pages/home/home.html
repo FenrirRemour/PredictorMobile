@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Hire Predictor
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <!--
+  <div id="floating-panel">
+    <b>Start: </b>
+    <select [(ngModel)]="start" id="start" (change)="calculateAndDisplayRoute()">
+      <option value="chicago, il">Chicago</option>
+      <option value="st louis, mo">St Louis</option>
+      <option value="joplin, mo">Joplin, MO</option>
+      <option value="oklahoma city, ok">Oklahoma City</option>
+      <option value="amarillo, tx">Amarillo</option>
+      <option value="gallup, nm">Gallup, NM</option>
+      <option value="flagstaff, az">Flagstaff, AZ</option>
+      <option value="winona, az">Winona</option>
+      <option value="kingman, az">Kingman</option>
+      <option value="barstow, ca">Barstow</option>
+      <option value="san bernardino, ca">San Bernardino</option>
+      <option value="los angeles, ca">Los Angeles</option>
+    </select><br>
+    <b>End: </b>
+    <select [(ngModel)]="end" id="end" (change)="calculateAndDisplayRoute()">
+      <option value="chicago, il">Chicago</option>
+      <option value="st louis, mo">St Louis</option>
+      <option value="joplin, mo">Joplin, MO</option>
+      <option value="oklahoma city, ok">Oklahoma City</option>
+      <option value="amarillo, tx">Amarillo</option>
+      <option value="gallup, nm">Gallup, NM</option>
+      <option value="flagstaff, az">Flagstaff, AZ</option>
+      <option value="winona, az">Winona</option>
+      <option value="kingman, az">Kingman</option>
+      <option value="barstow, ca">Barstow</option>
+      <option value="san bernardino, ca">San Bernardino</option>
+      <option value="los angeles, ca">Los Angeles</option>
+    </select>
+    </div>
+   --> 
+
+    <div id="floating-panel2">
+    
+      
+        <ion-list radio-group [(ngModel)]="cordinateOption" >
+            <ion-item>
+              <ion-label>Current Cordinate</ion-label>
+              <ion-radio value="current" checked></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Custom</ion-label>
+              <ion-radio value="custom"></ion-radio>
+            </ion-item>
+            
+        </ion-list>
+      
+        
+
+      
+
+        <form (ngSubmit)="apiInputSubmit()">
+            <ion-item>
+              <ion-label fixed>latitude</ion-label>
+              <ion-input type="number" [(ngModel)]="lati" name="lati"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label fixed>longitude</ion-label>
+              <ion-input type="number" [(ngModel)]="longi" name="longi"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label fixed>radius</ion-label>
+              <ion-input type="number" [(ngModel)]="radius" name="radius"></ion-input>
+            </ion-item>
+            <button ion-button type="submit" block>Submit</button>
+        </form>
+          
+        
+        
+
+    </div>
+
+
+
+    <div #map id="map"></div>
+</ion-content>
