@@ -3,6 +3,7 @@ import { IonicPage } from 'ionic-angular';
 import { NavController } from 'ionic-angular';
 
 declare var google;
+declare var $;
 
 @IonicPage()
 @Component({
@@ -23,7 +24,12 @@ export class HomePage {
   public radius;
 
   constructor(public navCtrl: NavController) {
-
+    $(function() {
+      $("a#toggle").click(function() {
+        $("#floating-panel2").slideToggle();
+        return false;
+      });
+    });
   }
 
   ionViewDidLoad(){
